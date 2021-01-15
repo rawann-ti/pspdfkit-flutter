@@ -143,7 +143,7 @@
         builder.userInterfaceViewMode = [self userInterfaceViewMode:dictionary];
         builder.thumbnailBarMode = [self thumbnailBarMode:dictionary];
         builder.pageMode = [self pageMode:dictionary];
-
+        builder.editableAnnotationTypes = false;
         if (dictionary[@"showPageLabels"]) {
             builder.pageLabelEnabled = [dictionary[@"showPageLabels"] boolValue];
         }
@@ -153,9 +153,9 @@
         if (dictionary[@"allowToolbarTitleChange"]) {
             builder.allowToolbarTitleChange = [dictionary[@"allowToolbarTitleChange"] boolValue];
         }
-        if (![dictionary[@"enableAnnotationEditing"] boolValue]) {
-            builder.editableAnnotationTypes = nil;
-        }
+        //if (![dictionary[@"enableAnnotationEditing"] boolValue]) {
+          //  builder.editableAnnotationTypes = nil;
+        //}
         if (dictionary[@"enableTextSelection"]) {
             builder.textSelectionEnabled = [dictionary[@"enableTextSelection"] boolValue];
         }
